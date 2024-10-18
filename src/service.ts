@@ -19,14 +19,8 @@ interface ITransfer {
 
 class AccountService {
 
-    static #db = DB.instance;
-
-    private getById(id: string): Account | undefined {
-        return AccountService.#db.findById(id);
-    }
-
     private deposit(destinationId: string, amount: number): IDeposit{
-        let destination = this.getById(destinationId);
+        let destination = DB.instance.findById(destinationId);
 
         if (!destination) destination = new Account(destinationId, 0);
 
@@ -38,7 +32,7 @@ class AccountService {
     }
 
     private withdraw(originId: string, amount: number): IWithdraw {
-        let origin = this.getById(originId);
+        let origin = DB.instance.findById(originId);
 
         if (!origin) throw new Error;
 
@@ -75,7 +69,7 @@ class AccountService {
     }
 
     public balanceHandler(id: string): number{
-        const account = this.getById(id);
+        const account = DB.instance.findById(id);
 
         if (!account) throw new Error;
 
@@ -87,7 +81,7 @@ class AccountService {
     }
 
     postReset(): void {
-        AccountService.#db.reset();
+        DB.instance.reset();
     }
 
 }
