@@ -5,3 +5,5 @@ const router = express.Router();
 router.get('/', (req: Request, res: Response) => {
     res.status(200).send('working');
 });
+
+export default router;
