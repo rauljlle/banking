@@ -1,5 +1,5 @@
 import { IAccount } from "./interfaces/account-info";
-import { DB } from "./DB";
+import { DB } from "./utils/DB";
 
 export class Account {
 

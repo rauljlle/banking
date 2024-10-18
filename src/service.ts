@@ -1,7 +1,7 @@
 import { IAccount } from './interfaces/account-info';
 import { IEventRequest } from './interfaces/event-request';
 import { IEventResponse } from './interfaces/event-response';
-import { DB } from './DB';
+import { DB } from './utils/DB';
 import { Account } from './model';
 
 interface IDeposit {
