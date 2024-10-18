@@ -1,12 +1,16 @@
 import { IAccount } from "./interfaces/account-info";
+import { DB } from "./DB";
+
 export class Account {
 
     #id: string;
     #balance: number;
+    private db = DB.instance;
 
     constructor(id: string, balance: number){
         this.#id = id;
         this.#balance = balance;
+        this.db.insert(this);
     }
 
     addBalance(amount: number){
