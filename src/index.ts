@@ -9,5 +9,5 @@ app.use(bodyParser.json());
 app.use('/', appRoutes);
 
 app.listen(port, () => {
-    console.log(`Teste na porta ${port}`);
+    console.log(`Running on port ${port}`);
 });
