@@ -1,5 +1,5 @@
-import { IAccount } from "./interfaces/account-info";
-import { DB } from "./utils/DB";
+import { IAccount } from "../interfaces/account-info";
+import { DB } from "../utils/DB";
 
 export class Account {
 

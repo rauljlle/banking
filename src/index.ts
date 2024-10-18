@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import appRoutes from './controller'
+import appRoutes from './app/controller'
 
 const app = express();
 const port = 3000;

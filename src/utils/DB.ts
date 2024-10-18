@@ -1,4 +1,4 @@
-import { Account } from "../model";
+import { Account } from "../app/model";
 
 export class DB {
 
